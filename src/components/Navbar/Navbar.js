@@ -1,29 +1,31 @@
 import CartWidget from "../CartWidget/CartWidget"
+import { NavLink } from "react-router-dom"
+
 
 const Navbar = () => {
     return(
-        <nav class="navbar navbar-expand-lg bg-light">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">Tienda Bags</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+        <nav className="navbar navbar-expand-lg bg-light">
+            <div className="container-fluid">
+                <NavLink className="navbar-brand" to='/'>Tienda Bags</NavLink>
+                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span className="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Productos</a>
+                <div className="collapse navbar-collapse" id="navbarNav">
+                <ul className="navbar-nav">
+                    <li className="nav-item">
+                    <NavLink className="nav-link active" aria-current="page" to='/'>Productos</NavLink>
                     </li>
-                    <li class="nav-item">
-                    <a class="nav-link" href="#">Mochilas</a>
+                    <li className="nav-item">
+                    <NavLink className="nav-link" to='/category/:id'>Mochilas</NavLink>
                     </li>
-                    <li class="nav-item">
-                    <a class="nav-link" href="#">Carteras</a>
+                    <li className="nav-item">
+                    <NavLink className="nav-link" to='/category/:id'>Carteras</NavLink>
                     </li>
-                    <li class="nav-item">
-                    <a class="nav-link" href="#">Accesorios</a>
+                    <li className="nav-item">
+                    <NavLink className="nav-link" to='/category/:id'>Accesorios</NavLink>
                     </li>
-                    <li class="nav-item">
-                    <a class="nav-link"> <CartWidget /></a>
+                    <li className="nav-item">
+                    <NavLink className="nav-link" to='/cart'> <CartWidget /></NavLink>
                     </li>
                 </ul>
                 </div>
