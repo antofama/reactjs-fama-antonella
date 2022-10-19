@@ -1,5 +1,4 @@
 import Title from "../Title/Title";
-import ItemCount from "../ItemCount/ItemCount";
 import ItemList from "../ItemList/ItemList";
 import {useState, useEffect} from 'react';
 import { useParams } from "react-router-dom";
@@ -19,26 +18,25 @@ const productos =[
 const ItemListContainer = () =>{
     const [data, setData] = useState ([]);
 
+    const {categoryId} = useParams();
+
     useEffect(() => {
         const getData = new Promise(resolve =>{
             setTimeout(()=>{
                 resolve(productos)
-            }, 2000);
+            },1000);
         });
-        getData.then(res => setData(res))
-
-    },[])
-
-
-    const onAdd = (quantity) =>{
-        console.log('compraste ${quantity} unidades');
-    }
+        if (categoryId){
+            getData.then(res => setData(res.filter(productos => productos.category === categoryId)));
+        }else{
+            getData.then(res => setData(res));
+        }
+    },[categoryId])
 
 
     return(
         <>
             <Title greeting='Disfruta de tu estilo'  />
-            <ItemCount initial={1} stock={5} onAdd={onAdd}/>
             <ItemList data={data} />
         </>
     )

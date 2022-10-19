@@ -16,13 +16,13 @@ const Navbar = () => {
                     <NavLink className="nav-link active" aria-current="page" to='/'>Productos</NavLink>
                     </li>
                     <li className="nav-item">
-                    <NavLink className="nav-link" to='/category/:id'>Mochilas</NavLink>
+                    <NavLink className="nav-link" to='/category/mochilas'>Mochilas</NavLink>
                     </li>
                     <li className="nav-item">
-                    <NavLink className="nav-link" to='/category/:id'>Carteras</NavLink>
+                    <NavLink className="nav-link" to='/category/carteras'>Carteras</NavLink>
                     </li>
                     <li className="nav-item">
-                    <NavLink className="nav-link" to='/category/:id'>Accesorios</NavLink>
+                    <NavLink className="nav-link" to='/category/accesorios'>Accesorios</NavLink>
                     </li>
                     <li className="nav-item">
                     <NavLink className="nav-link" to='/cart'> <CartWidget /></NavLink>
