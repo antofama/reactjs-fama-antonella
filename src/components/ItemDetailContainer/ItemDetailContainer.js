@@ -26,7 +26,7 @@ const ItemDetailContainer = () => {
             }, 2000);
         });
         getData.then(res => setData(res.find(productos => productos.id === parseInt(id))));
-    }, []);
+    }, [id]);
 
 
     return(
