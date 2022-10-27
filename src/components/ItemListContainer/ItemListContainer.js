@@ -23,8 +23,8 @@ const ItemListContainer = () =>{
     useEffect(() => {
         const getData = new Promise(resolve =>{
             setTimeout(()=>{
-                resolve(productos)
-            },1000);
+                resolve(productos);
+            },2000);
         });
         if (categoryId){
             getData.then(res => setData(res.filter(productos => productos.category === categoryId)));

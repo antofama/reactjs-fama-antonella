@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { useCartContext } from "../../Context/CartContext"
-import ItemCart from "../ItemCart/ItemCat";
+import ItemCart from "../ItemCart/ItemCart";
 
 
 const Cart = () =>{
@@ -12,7 +12,7 @@ const Cart = () =>{
                 <p>No hay elementos en el carrito</p>
                 <Link to='/'></Link>
             </>
-        )
+        );
     }
     return(
         <>
