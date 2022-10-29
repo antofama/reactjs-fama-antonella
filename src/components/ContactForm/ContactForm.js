@@ -3,10 +3,7 @@ import { addDoc, collection, getFirestore, serverTimestamp } from 'firebase/fire
 import { useState } from 'react';
 import { useCartContext } from '../../Context/CartContext';
 
-
-
 const defaultForm = { name: "", email: "", message: "" };
-
 const ContactForm = () => {
     const [form, setForm] = useState(defaultForm);
     const [id, setId] = useState('');
@@ -36,8 +33,7 @@ const ContactForm = () => {
         <div>
             {id ? (
                 <div>
-                    Muchas gracias por su compra, su id de compra es: {id}
-                
+                    Gracias por enviar el mensaje, se ha guardado con id {id}
                 </div>
             ) : (
             <form onSubmit={submitHandler}>

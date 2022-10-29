@@ -1,3 +1,10 @@
+# TiendaBags || ReactJs || CoderHouse
+
+Soy Antonella este mi proyecto ReacJS donde realize un e-commerce. En el mismo permite que el usuario tenga una navgalidad completa por la pagina, seleccione los productos/articulos que desee y ver la informacion de cada uno de ellos.
+
+Creamos una base de datos en Firebase, en donde hemos cargados nuestros articulos. 
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
