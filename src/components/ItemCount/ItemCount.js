@@ -19,7 +19,9 @@ const ItemCount = ({initial, stock, onAdd}) =>{
     return(
         <div className='counter'>
             <Button variant="info" disabled={count <=1} onClick={menos}>-</Button>
-            <span>{count}</span>
+            <>
+                <span> {count} </span>
+            </>
             <Button variant="info" disabled={count >=stock} onClick={mas}>+</Button>
             <>
                 <Button variant="primary" size="lg" disabled={stock<=0} onClick={ () => onAdd(count)} >

@@ -1,6 +1,5 @@
 import Card from 'react-bootstrap/Card';
 import { Link } from 'react-router-dom';
-import ItemCount from '../ItemCount/ItemCount';
 
 const Item = ({info}) =>{
     
@@ -17,9 +16,6 @@ const Item = ({info}) =>{
                             </Card.Body>
                 </Card>
             </Link>
-            <div>
-                <ItemCount stock={info.stock}/>
-            </div>
         </>    
     )
 }

@@ -1,8 +1,8 @@
-import React from 'react';
-import { useState } from 'react';
-import { useCartContext } from '../../Context/CartContext';;
 import { Link } from 'react-router-dom'
-import { addDoc, collection, serverTimestamp } from 'firebase/firestore';
+import { addDoc, collection, getFirestore, serverTimestamp } from 'firebase/firestore';
+import { useState } from 'react';
+import { useCartContext } from '../../Context/CartContext';
+
 
 
 const defaultForm = { name: "", email: "", message: "" };
@@ -10,7 +10,7 @@ const defaultForm = { name: "", email: "", message: "" };
 const ContactForm = () => {
     const [form, setForm] = useState(defaultForm);
     const [id, setId] = useState('');
-    const{cart,totalPrice,cleanCart}= UseCartContext()
+        const {cart,totalPrice,cleanCart} = useCartContext();
 
     const changeHandler =(ev) =>{
         setForm({...form, [ev.target.name] : ev.target.value})
@@ -18,6 +18,7 @@ const ContactForm = () => {
 
     const submitHandler = (ev) => {
         ev.preventDefault();
+        const db = getFirestore();
         const ordersCollection = collection(db, 'orders');
         addDoc (ordersCollection, {
             form,

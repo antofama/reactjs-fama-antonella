@@ -18,14 +18,14 @@ const ItemDetail = ({data}) => {
     };
 
     return (
-        <Card style={{ width: '10rem' }}>
+        <Card  border="warning" style={{ width: '10rem' }}>
             <Card.Img variant="top" src={data.image} />
             <Card.Body>
                 <Card.Title>{data.title}</Card.Title>
                 <Card.Text>
                     {data.price}
                 </Card.Text>
-                <Button variant="primary">
+                <Button variant="warning">
                 {
                     goToCart 
                     ? <Link to='/cart'>Terminar mi compra</Link>
