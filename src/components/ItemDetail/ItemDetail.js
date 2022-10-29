@@ -5,9 +5,12 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useCartContext } from '../../Context/CartContext';
 
+
+
+
 const ItemDetail = ({data}) => {
     const [goToCart, setGoToCart] = useState(false);
-    const [addProduct] = useCartContext();
+    const {addProduct} = useCartContext();
 
     const onAdd = (quantity) => {
         setGoToCart(true);
@@ -25,8 +28,8 @@ const ItemDetail = ({data}) => {
                 <Button variant="primary">
                 {
                     goToCart 
-                    ? (<Link to='/cart'>Terminar mi compra</Link>)
-                    :(<ItemCount initial={1} stock={5} onAdd={onAdd}/>)
+                    ? <Link to='/cart'>Terminar mi compra</Link>
+                    :<ItemCount initial={1} stock={5} onAdd={onAdd}/>
                 }
                 </Button>
             </Card.Body>

@@ -2,7 +2,7 @@ import Button from 'react-bootstrap/Button';
 import {useState, useEffect} from "react";
 
 const ItemCount = ({initial, stock, onAdd}) =>{
-    const [count, setCount] = useState((initial));
+    const [count, setCount] = useState(initial);
 
     const mas = () =>{
         setCount(count + 1);
@@ -21,12 +21,11 @@ const ItemCount = ({initial, stock, onAdd}) =>{
             <Button variant="info" disabled={count <=1} onClick={menos}>-</Button>
             <span>{count}</span>
             <Button variant="info" disabled={count >=stock} onClick={mas}>+</Button>
-            <hr></hr>
-            <div className="d-grid gap-2">
+            <>
                 <Button variant="primary" size="lg" disabled={stock<=0} onClick={ () => onAdd(count)} >
-                    Agregar al carrito
+                        Agregar al carrito
                 </Button>
-            </div>
+            </>            
         </div>
     )
 }
