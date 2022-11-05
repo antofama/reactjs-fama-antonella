@@ -57,7 +57,7 @@ const ContactForm = () => {
                     />
                 </div>
                 <div>
-                    <label htmlFor="message" className="letter">Ingrese su metodo de pago</label>
+                    <label htmlFor="message" className="letter">Ingrese su mensaje</label>
                     <textarea
                     name="message"
                     id="message"

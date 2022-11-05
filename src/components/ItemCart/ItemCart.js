@@ -3,7 +3,7 @@ import { useCartContext } from '../../Context/CartContext';
 
 
 const ItemCart = ({product}) => {
-    const [removeProduct] = useCartContext();
+    const { removeProduct } = useCartContext();
     return(
         <div className="itemCart">
             <img src={product.image} alt={product.title}></img>

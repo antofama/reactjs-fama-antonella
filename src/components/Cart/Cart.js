@@ -23,10 +23,8 @@ const Cart = () =>{
                 Total: {totalPrice()}
             </p>
             <div className="d-grid gap-2">
-                <Button variant="primary" size="lg" >
-                <Link to='/checkout'></Link>
-                    Emitir Compra
-                </Button>
+                <Link to='/checkout'> <Button variant="primary" size="lg" >Emitir Compra</Button></Link>
+                    
             </div>
         </>
     )
